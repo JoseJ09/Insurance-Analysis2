@@ -1,43 +1,30 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Insurance-Analysis2
+# Project 1. Insurance-Analysis
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-## Resumen
+## Summary
 
-Se obtuvieron datos de las reclamaciones de una aseguradora en
-Monterrey. De acuerdo a los datos obtenidos es posible combinar los
-riesgos del portafolio de la aseguradora. Este reporte se crea como un
-soporte para el Comité de Riesgo para conocer la estructura de los
-riesgos así como la influencia de las reclamaciones con las variables
-que se conocen.
+Claims data were obtained from an insurer in Monterrey. According to the
+data obtained it is possible to combine the risks of the insurer’s
+portfolio. This report is created as a support for the Risk Committee to
+know the structure of the risks as well as as the influence of the
+claims with the variables that are known.
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Goals
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-![](README_files/figure-gfm/pressure-1.png)<!-- -->
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub.
+1.  Descriptive analysis of the variables.
+2.  Create categories based on the number of claims, severity, risk,
+    etc.
+3.  The total value of payments is a fundamental variable for which the
+    Committee is interested in knowing if this is a consequence of the
+    number of complaints and the number of portfolio years
+4.  The Committee wants to find the reasons why the payment increases or
+    decreases.Therefore, it is necessary to check if this is a
+    consequence of variables such as location,distance etc.
+5.  The Committee wants to decide if special fees should be charged
+    depending on factors such as location, insured amount, kilometers,
+    bonuses, etc.
