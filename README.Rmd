@@ -45,19 +45,26 @@ head(insur)
 
 a)Kilometres
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
+```{r, include=FALSE}
+knitr::opts_knit$set(global.device = TRUE)
 ```
 
 ```{r, echo=FALSE}
 
 library(dplyr)
 library(plotly)
+library(ggplot2)
 
 plot_ly(x=insur$Kilometres, type="histogram")%>%
  layout(title="Histogram of Kilometers",xaxis=list(title="Kilometres")
         ,yaxis=list(title="Observations"))
 
 ```
+b)Zones
 
+```{r, echo=FALSE}
+
+plot_ly(x=insur$Zone, type="histogram")%>%
+    layout(title="Histogram of Zones", xaxis=list(title="Zones"), yaxis=list(title="Observations"))
+
+```
