@@ -1,6 +1,7 @@
 ---
 output: github_document
 always_allow_html: yes
+
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -44,9 +45,14 @@ head(insur)
 
 a)Kilometres
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
 ```{r, echo=FALSE}
+
 library(dplyr)
-library(ggplot2)
 library(plotly)
 
 plot_ly(x=insur$Kilometres, type="histogram")%>%
