@@ -1,5 +1,5 @@
 ---
-output: github_document
+output: rmarkdown::github_document
 always_allow_html: yes
 
 ---
@@ -9,7 +9,7 @@ always_allow_html: yes
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>", fig.path = "README_figs/README-"
 )
 ```
 
@@ -45,26 +45,33 @@ head(insur)
 
 a)Kilometres
 
-```{r, include=FALSE}
-knitr::opts_knit$set(global.device = TRUE)
+
+```{r param_a0, echo=FALSE}
+set.seed(2020)
+param_a= sample(1:10,25,replace=T)
+```
+```{r param_a, echo=FALSE}
+hist(param_a)
 ```
 
-```{r, echo=FALSE}
+```{r,echo=FALSE,fig=TRUE }
 
 library(dplyr)
 library(plotly)
 library(ggplot2)
 
-plot_ly(x=insur$Kilometres, type="histogram")%>%
+p<-plot_ly(x=insur$Kilometres, type="histogram")%>%
  layout(title="Histogram of Kilometers",xaxis=list(title="Kilometres")
         ,yaxis=list(title="Observations"))
-
+p
 ```
+
 b)Zones
 
 ```{r, echo=FALSE}
 
-plot_ly(x=insur$Zone, type="histogram")%>%
+x<-plot_ly(x=insur$Zone, type="histogram")%>%
     layout(title="Histogram of Zones", xaxis=list(title="Zones"), yaxis=list(title="Observations"))
 
+x
 ```
