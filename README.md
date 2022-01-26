@@ -28,3 +28,13 @@ claims with the variables that are known.
 5.  The Committee wants to decide if special fees should be charged
     depending on factors such as location, insured amount, kilometers,
     bonuses, etc.
+
+## Database
+
+    #>   Kilometres Zone Bonus Make Insured Claims Payment
+    #> 1          1    1     1    1  455.13    108  392491
+    #> 2          1    1     1    2   69.17     19   46221
+    #> 3          1    1     1    3   72.88     13   15694
+    #> 4          1    1     1    4 1292.39    124  422201
+    #> 5          1    1     1    5  191.01     40  119373
+    #> 6          1    1     1    6  477.66     57  170913

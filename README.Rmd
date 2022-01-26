@@ -31,3 +31,11 @@ portfolio years
 4. The Committee wants to find the reasons why the payment increases or decreases.Therefore, it is necessary to check if this is a consequence of variables such as location,distance etc.
 5. The Committee wants to decide if special fees should be charged depending on factors
 such as location, insured amount, kilometers, bonuses, etc.
+
+## Database
+
+```{r, echo=FALSE}
+insur<-read.table("insurance.csv",header=T,sep=",")
+head(insur)
+
+```
