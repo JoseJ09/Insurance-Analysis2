@@ -52,18 +52,63 @@ library(dplyr)
 library(plotly)
 library(ggplot2)
 
-p<-plot_ly(x=insur$Kilometres, type="histogram")%>%
+k<-plot_ly(x=insur$Kilometres, type="histogram")%>%
  layout(title="Histogram of Kilometers",xaxis=list(title="Kilometres")
         ,yaxis=list(title="Observations"))
-p
+k
 ```
 
 b)Zones
 
 ```{r, echo=FALSE}
 
-x<-plot_ly(x=insur$Zone, type="histogram")%>%
+z<-plot_ly(x=insur$Zone, type="histogram")%>%
     layout(title="Histogram of Zones", xaxis=list(title="Zones"), yaxis=list(title="Observations"))
 
-x
+z
 ```
+c)Bonus
+
+```{r, echo=FALSE}
+
+b<-plot_ly(x=insur$Zone, type="histogram")%>%
+    layout(title="Histogram of Zones", xaxis=list(title="Zones"), yaxis=list(title="Observations"))
+
+b
+```
+d)Models
+
+```{r, echo=FALSE}
+
+m<-plot_ly(x=insur$Make, type="histogram")%>%
+  layout(title="Histogram of Model", xaxis=list(title="Model"), yaxis=list(title="Observations"))
+
+m
+```
+e)Insured
+
+```{r, echo=FALSE}
+
+i<-plot_ly(x=insur$Insured, type="histogram")%>%
+ layout(title="Histogram of Insured", xaxis=list(title="Insured"), yaxis=list(title="Observations"))
+
+i
+```
+f)Claims
+
+```{r, echo=FALSE}
+
+f<-plot_ly(x=insur$Claims, type="histogram")%>%
+ layout(title="Histograma de Reclamos", xaxis=list(title="Reclamos"), yaxis=list(title="Observaciones"))
+
+f
+```
+g)Payments
+```{r, echo=FALSE}
+
+g<-plot_ly(x=insur$Payment, type="histogram")%>%
+  layout(title="Histogram of Payments", xaxis=list(title="Payments"), yaxis=list(title="Observations"))
+
+g
+```
+
