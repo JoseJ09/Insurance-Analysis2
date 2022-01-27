@@ -46,15 +46,7 @@ head(insur)
 a)Kilometres
 
 
-```{r param_a0, echo=FALSE}
-set.seed(2020)
-param_a= sample(1:10,25,replace=T)
-```
-```{r param_a, echo=FALSE}
-hist(param_a)
-```
-
-```{r,echo=FALSE,fig=TRUE }
+```{r,echo=FALSE,fig=TRUE,warning=FALSE,message=FALSE }
 
 library(dplyr)
 library(plotly)

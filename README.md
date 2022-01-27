@@ -43,29 +43,6 @@ claims with the variables that are known.
 
 a)Kilometres
 
-![](README_figs/README-param_a-1.png)<!-- -->
-
-    #> 
-    #> Attaching package: 'dplyr'
-    #> The following objects are masked from 'package:stats':
-    #> 
-    #>     filter, lag
-    #> The following objects are masked from 'package:base':
-    #> 
-    #>     intersect, setdiff, setequal, union
-    #> Loading required package: ggplot2
-    #> 
-    #> Attaching package: 'plotly'
-    #> The following object is masked from 'package:ggplot2':
-    #> 
-    #>     last_plot
-    #> The following object is masked from 'package:stats':
-    #> 
-    #>     filter
-    #> The following object is masked from 'package:graphics':
-    #> 
-    #>     layout
-
 ![](README_figs/README-unnamed-chunk-3-1.png)<!-- -->
 
 b)Zones
