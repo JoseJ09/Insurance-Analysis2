@@ -189,8 +189,8 @@ plot_ly(insurance_data_models, x=~Make, y=~sum_payments, type='bar', name='Sum I
 ```
 
 
-###3.-The total value of payments is a fundamental variable for which the Committee is interested in knowing
-##if this is a consequence of the number of claims and the number of years in the portfolio.
+## 3.-The total value of payments is a fundamental variable for which the Committee is interested in knowing
+## if this is a consequence of the number of claims and the number of years in the portfolio.
 
 
 a) corr graph all variables
@@ -223,18 +223,21 @@ plot_ly(data = insur, x = ~Insured, y = ~Payment)
 
 ##4.-The Committee wants to find the variables that cause the payment to increase or decrease.
 ##Therefore it is necessary to check if this is a consequence of variables such as location, distance, etc.
-## It is necessary to perform a regression to find which variables are the most relevant (p test).
+
+It is necessary to perform a regression to find which variables are the most relevant (p test).
+
+```{r, echo=FALSE}
+
+lineModel <- lm(Payment ~ ., data = insur)
+summary(lineModel) 
+
+```
 
  View payments and payment averages by:
 a) Insured
 b) Claims
 c) Kilometres
 
-```{r, echo=FALSE}
-
-lineModel <- lm(Payment ~ ., data = insur)
-summary(lineModel) 
-```
 
 ```{r, echo=FALSE}
 

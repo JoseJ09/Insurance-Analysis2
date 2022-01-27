@@ -81,9 +81,9 @@ b) Zones
 
 ![](README_figs/README-unnamed-chunk-12-1.png)<!-- -->![](README_figs/README-unnamed-chunk-12-2.png)<!-- -->![](README_figs/README-unnamed-chunk-12-3.png)<!-- -->
 
-###3.-The total value of payments is a fundamental variable for which
-the Committee is interested in knowing ##if this is a consequence of the
-number of claims and the number of years in the portfolio.
+## 3.-The total value of payments is a fundamental variable for which the Committee is interested in knowing
+
+## if this is a consequence of the number of claims and the number of years in the portfolio.
 
 1.  corr graph all variables
 
@@ -109,12 +109,10 @@ number of claims and the number of years in the portfolio.
 
 ##4.-The Committee wants to find the variables that cause the payment to
 increase or decrease. ##Therefore it is necessary to check if this is a
-consequence of variables such as location, distance, etc. ## It is
-necessary to perform a regression to find which variables are the most
-relevant (p test).
+consequence of variables such as location, distance, etc.
 
-View payments and payment averages by: a) Insured b) Claims c)
-Kilometres
+It is necessary to perform a regression to find which variables are the
+most relevant (p test).
 
     #> 
     #> Call:
@@ -139,6 +137,9 @@ Kilometres
     #> Residual standard error: 70830 on 2175 degrees of freedom
     #> Multiple R-squared:  0.9952, Adjusted R-squared:  0.9952 
     #> F-statistic: 7.462e+04 on 6 and 2175 DF,  p-value: < 2.2e-16
+
+View payments and payment averages by: a) Insured b) Claims c)
+Kilometres
 
     #> 
     #> Call:
