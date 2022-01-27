@@ -67,7 +67,11 @@ z<-plot_ly(x=insur$Zone, type="histogram")%>%
 
 z
 ```
+
+
 c)Bonus
+
+
 
 ```{r, echo=FALSE}
 
@@ -76,7 +80,11 @@ b<-plot_ly(x=insur$Zone, type="histogram")%>%
 
 b
 ```
+
+
 d)Models
+
+
 
 ```{r, echo=FALSE}
 
@@ -85,7 +93,11 @@ m<-plot_ly(x=insur$Make, type="histogram")%>%
 
 m
 ```
+
+
 e)Insured
+
+
 
 ```{r, echo=FALSE}
 
@@ -94,7 +106,11 @@ i<-plot_ly(x=insur$Insured, type="histogram")%>%
 
 i
 ```
+
+
 f)Claims
+
+
 
 ```{r, echo=FALSE}
 
@@ -103,7 +119,11 @@ f<-plot_ly(x=insur$Claims, type="histogram")%>%
 
 f
 ```
+
+
 g)Payments
+
+
 ```{r, echo=FALSE}
 
 g<-plot_ly(x=insur$Payment, type="histogram")%>%

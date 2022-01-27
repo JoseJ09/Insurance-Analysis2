@@ -47,13 +47,24 @@ a)Kilometres
 
 b)Zones
 
-![](README_figs/README-unnamed-chunk-4-1.png)<!-- --> c)Bonus
+![](README_figs/README-unnamed-chunk-4-1.png)<!-- -->
 
-![](README_figs/README-unnamed-chunk-5-1.png)<!-- --> d)Models
+c)Bonus
 
-![](README_figs/README-unnamed-chunk-6-1.png)<!-- --> e)Insured
+![](README_figs/README-unnamed-chunk-5-1.png)<!-- -->
 
-![](README_figs/README-unnamed-chunk-7-1.png)<!-- --> f)Claims
+d)Models
 
-![](README_figs/README-unnamed-chunk-8-1.png)<!-- --> g)Payments
+![](README_figs/README-unnamed-chunk-6-1.png)<!-- -->
+
+e)Insured
+
+![](README_figs/README-unnamed-chunk-7-1.png)<!-- -->
+
+f)Claims
+
+![](README_figs/README-unnamed-chunk-8-1.png)<!-- -->
+
+g)Payments
+
 ![](README_figs/README-unnamed-chunk-9-1.png)<!-- -->
