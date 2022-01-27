@@ -206,7 +206,7 @@ corrplot(M, method="number")
 
 b) Scatterplot - Claims
 
-```{r, echo=FALSE}
+```{r,echo=FALSE,fig=TRUE,warning=FALSE,message=FALSE}
 
 plot_ly(data = insur, x = ~Claims, y = ~Payment)
 
@@ -214,7 +214,7 @@ plot_ly(data = insur, x = ~Claims, y = ~Payment)
 
 c) Scatterplot  - Insured
 
-```{r, echo=FALSE}
+```{r,echo=FALSE,fig=TRUE,warning=FALSE,message=FALSE}
 
 plot_ly(data = insur, x = ~Insured, y = ~Payment)
 
@@ -225,16 +225,21 @@ plot_ly(data = insur, x = ~Insured, y = ~Payment)
 ##Therefore it is necessary to check if this is a consequence of variables such as location, distance, etc.
 ## It is necessary to perform a regression to find which variables are the most relevant (p test).
 
-## View payments and payment averages by:
-## a) Insured
-## b) Claims
-## c) Kilometres
+ View payments and payment averages by:
+a) Insured
+b) Claims
+c) Kilometres
 
 ```{r, echo=FALSE}
 
 lineModel <- lm(Payment ~ ., data = insur)
 summary(lineModel) 
+```
 
+```{r, echo=FALSE}
+
+lineModel <- lm(Payment ~ Claims, data = insur)
+summary(lineModel)
 
 insur %>% 
   plot_ly(x = ~Claims) %>% 

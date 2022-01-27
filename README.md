@@ -101,27 +101,9 @@ number of claims and the number of years in the portfolio.
 
 2.  Scatterplot - Claims
 
-<!-- -->
-
-    #> No trace type specified:
-    #>   Based on info supplied, a 'scatter' trace seems appropriate.
-    #>   Read more about this trace type -> https://plotly.com/r/reference/#scatter
-    #> No scatter mode specifed:
-    #>   Setting the mode to markers
-    #>   Read more about this attribute -> https://plotly.com/r/reference/#scatter-mode
-
 ![](README_figs/README-unnamed-chunk-14-1.png)<!-- -->
 
 3.  Scatterplot - Insured
-
-<!-- -->
-
-    #> No trace type specified:
-    #>   Based on info supplied, a 'scatter' trace seems appropriate.
-    #>   Read more about this trace type -> https://plotly.com/r/reference/#scatter
-    #> No scatter mode specifed:
-    #>   Setting the mode to markers
-    #>   Read more about this attribute -> https://plotly.com/r/reference/#scatter-mode
 
 ![](README_figs/README-unnamed-chunk-15-1.png)<!-- -->
 
@@ -131,13 +113,8 @@ consequence of variables such as location, distance, etc. ## It is
 necessary to perform a regression to find which variables are the most
 relevant (p test).
 
-## View payments and payment averages by:
-
-## a) Insured
-
-## b) Claims
-
-## c) Kilometres
+View payments and payment averages by: a) Insured b) Claims c)
+Kilometres
 
     #> 
     #> Call:
@@ -163,7 +140,26 @@ relevant (p test).
     #> Multiple R-squared:  0.9952, Adjusted R-squared:  0.9952 
     #> F-statistic: 7.462e+04 on 6 and 2175 DF,  p-value: < 2.2e-16
 
-![](README_figs/README-unnamed-chunk-16-1.png)<!-- -->
+    #> 
+    #> Call:
+    #> lm(formula = Payment ~ Claims, data = insur)
+    #> 
+    #> Residuals:
+    #>      Min       1Q   Median       3Q      Max 
+    #> -1744858    -8545     2773    13386  1491369 
+    #> 
+    #> Coefficients:
+    #>             Estimate Std. Error t value Pr(>|t|)    
+    #> (Intercept) -3362.29    2154.79   -1.56    0.119    
+    #> Claims       5020.08      10.35  485.11   <2e-16 ***
+    #> ---
+    #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    #> 
+    #> Residual standard error: 97480 on 2180 degrees of freedom
+    #> Multiple R-squared:  0.9908, Adjusted R-squared:  0.9908 
+    #> F-statistic: 2.353e+05 on 1 and 2180 DF,  p-value: < 2.2e-16
+
+![](README_figs/README-unnamed-chunk-17-1.png)<!-- -->
 
     #> 
     #> Call:
@@ -184,7 +180,7 @@ relevant (p test).
     #> Multiple R-squared:  0.8709, Adjusted R-squared:  0.8708 
     #> F-statistic: 1.471e+04 on 1 and 2180 DF,  p-value: < 2.2e-16
 
-![](README_figs/README-unnamed-chunk-17-1.png)<!-- -->
+![](README_figs/README-unnamed-chunk-18-1.png)<!-- -->
 
     #> 
     #> Call:
@@ -205,7 +201,7 @@ relevant (p test).
     #> Multiple R-squared:  0.9908, Adjusted R-squared:  0.9908 
     #> F-statistic: 2.353e+05 on 1 and 2180 DF,  p-value: < 2.2e-16
 
-![](README_figs/README-unnamed-chunk-18-1.png)<!-- -->
+![](README_figs/README-unnamed-chunk-19-1.png)<!-- -->
 
 ##5.-Finally the Committee wants to decide if fees should be charged
 ##depending on factors such as location, amount insured, ##miles,
@@ -215,8 +211,8 @@ year.
 ##For that they must calculate sum(payments)/sum(insured)=cost of the
 risk. for each of the ##following categories:
 
-![](README_figs/README-unnamed-chunk-19-1.png)<!-- -->
-
 ![](README_figs/README-unnamed-chunk-20-1.png)<!-- -->
 
 ![](README_figs/README-unnamed-chunk-21-1.png)<!-- -->
+
+![](README_figs/README-unnamed-chunk-22-1.png)<!-- -->
