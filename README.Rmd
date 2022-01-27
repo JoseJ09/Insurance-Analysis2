@@ -1,5 +1,5 @@
 ---
-output: rmarkdown::github_document
+output: md_document
 always_allow_html: yes
 
 ---
@@ -52,9 +52,11 @@ library(dplyr)
 library(plotly)
 library(ggplot2)
 
+
+
 k<-plot_ly(x=insur$Kilometres, type="histogram")%>%
  layout(title="Histogram of Kilometers",xaxis=list(title="Kilometres")
-        ,yaxis=list(title="Observations"))
+        ,yaxis=list(title="Observations"),bargap=0.1 )
 k
 ```
 
@@ -63,7 +65,7 @@ b)Zones
 ```{r, echo=FALSE}
 
 z<-plot_ly(x=insur$Zone, type="histogram")%>%
-    layout(title="Histogram of Zones", xaxis=list(title="Zones"), yaxis=list(title="Observations"))
+    layout(title="Histogram of Zones", xaxis=list(title="Zones"), yaxis=list(title="Observations"),bargap=0.1)
 
 z
 ```
@@ -75,8 +77,8 @@ c)Bonus
 
 ```{r, echo=FALSE}
 
-b<-plot_ly(x=insur$Zone, type="histogram")%>%
-    layout(title="Histogram of Zones", xaxis=list(title="Zones"), yaxis=list(title="Observations"))
+b<-plot_ly(x=insur$Bonus, type="histogram")%>%
+ layout(title="Histogram of Bonus", xaxis=list(title="Bonus"), yaxis=list(title="Observations"),bargap=0.1)
 
 b
 ```
@@ -89,7 +91,7 @@ d)Models
 ```{r, echo=FALSE}
 
 m<-plot_ly(x=insur$Make, type="histogram")%>%
-  layout(title="Histogram of Model", xaxis=list(title="Model"), yaxis=list(title="Observations"))
+  layout(title="Histogram of Model", xaxis=list(title="Model"), yaxis=list(title="Observations"),bargap=0.1)
 
 m
 ```
@@ -102,7 +104,7 @@ e)Insured
 ```{r, echo=FALSE}
 
 i<-plot_ly(x=insur$Insured, type="histogram")%>%
- layout(title="Histogram of Insured", xaxis=list(title="Insured"), yaxis=list(title="Observations"))
+ layout(title="Histogram of Insured", xaxis=list(title="Insured"), yaxis=list(title="Observations"),bargap=0.1)
 
 i
 ```
@@ -115,7 +117,7 @@ f)Claims
 ```{r, echo=FALSE}
 
 f<-plot_ly(x=insur$Claims, type="histogram")%>%
- layout(title="Histograma de Reclamos", xaxis=list(title="Reclamos"), yaxis=list(title="Observaciones"))
+ layout(title="Histograma de Reclamos", xaxis=list(title="Reclamos"), yaxis=list(title="Observaciones"),bargap=0.1)
 
 f
 ```
@@ -127,7 +129,7 @@ g)Payments
 ```{r, echo=FALSE}
 
 g<-plot_ly(x=insur$Payment, type="histogram")%>%
-  layout(title="Histogram of Payments", xaxis=list(title="Payments"), yaxis=list(title="Observations"))
+  layout(title="Histogram of Payments", xaxis=list(title="Payments"), yaxis=list(title="Observations"),bargap=0.1)
 
 g
 ```
