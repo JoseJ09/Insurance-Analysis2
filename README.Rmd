@@ -41,7 +41,7 @@ insur<-read.table("insurance.csv",header=T,sep=",")
 head(insur)
 
 ```
-## 1.-Obtain a visualization that explains with an image the distribution of each of the variables
+## 1.-Obtain a visualization that explains with an image the distribution of each of the variables.
 
 a)Kilometres
 
@@ -131,4 +131,178 @@ g<-plot_ly(x=insur$Payment, type="histogram")%>%
 
 g
 ```
+## 2.-Create categories based on the number of claims, severity, risk etc.
 
+a) Kilometres
+
+```{r, echo=FALSE}
+insurance_data_kilometres<-insur %>% group_by(Kilometres)
+
+insurance_data_kilometres<-insur %>% group_by(Kilometres) %>% 
+  summarise(sum_insured=sum(Insured), sum_claims=sum(Claims),
+            sum_payments=sum(Payment))
+
+insurance_data_kilometres<-data.frame(insurance_data_kilometres) 
+
+
+plot_ly(insurance_data_kilometres, x=~Kilometres, y=~sum_insured, type='bar', name='Sum Insured per Kilometers')
+
+plot_ly(insurance_data_kilometres, x=~Kilometres, y=~sum_claims, type='bar', name='Sum Insured per Kilometers')
+
+plot_ly(insurance_data_kilometres, x=~Kilometres, y=~sum_payments, type='bar', name='Sum Insured per Kilometers')
+
+```
+b) Zones
+
+```{r, echo=FALSE}
+
+insurance_data_zones<-insur %>% group_by(Zone) %>% 
+   summarise(sum_insured=sum(Insured), sum_claims=sum(Claims),
+            sum_payments=sum(Payment))
+
+insurance_data_zones<-data.frame(insurance_data_zones)
+
+plot_ly(insurance_data_zones, x=~Zone, y=~sum_insured, type='bar', name='Sum Insured per Zones')
+
+plot_ly(insurance_data_zones, x=~Zone, y=~sum_claims, type='bar', name='Sum Insured per Zones')
+
+plot_ly(insurance_data_zones, x=~Zone, y=~sum_payments, type='bar', name='Sum Insured per Zones')
+
+```
+
+c) Model
+
+```{r, echo=FALSE}
+
+insurance_data_models<-insur %>% group_by(Make) %>% 
+   summarise(sum_insured=sum(Insured), sum_claims=sum(Claims),
+            sum_payments=sum(Payment))
+
+insurance_data_models<-data.frame(insurance_data_models)
+
+plot_ly(insurance_data_models, x=~Make, y=~sum_insured, type='bar', name='Sum Insured per Zones')
+
+plot_ly(insurance_data_models, x=~Make, y=~sum_claims, type='bar', name='Sum Insured per Zones')
+
+plot_ly(insurance_data_models, x=~Make, y=~sum_payments, type='bar', name='Sum Insured per Zones')
+
+```
+
+
+###3.-The total value of payments is a fundamental variable for which the Committee is interested in knowing
+##if this is a consequence of the number of claims and the number of years in the portfolio.
+
+
+a) corr graph all variables
+
+
+```{r,echo=FALSE,fig=TRUE,warning=FALSE,message=FALSE}
+library(corrplot)
+M<-cor(insur)
+head(round(M,2))
+corrplot(M, method="number")
+
+```
+
+b) Scatterplot - Claims
+
+```{r, echo=FALSE}
+
+plot_ly(data = insur, x = ~Claims, y = ~Payment)
+
+```
+
+c) Scatterplot  - Insured
+
+```{r, echo=FALSE}
+
+plot_ly(data = insur, x = ~Insured, y = ~Payment)
+
+```
+
+
+##4.-The Committee wants to find the variables that cause the payment to increase or decrease.
+##Therefore it is necessary to check if this is a consequence of variables such as location, distance, etc.
+## It is necessary to perform a regression to find which variables are the most relevant (p test).
+
+## View payments and payment averages by:
+## a) Insured
+## b) Claims
+## c) Kilometres
+
+```{r, echo=FALSE}
+
+lineModel <- lm(Payment ~ ., data = insur)
+summary(lineModel) 
+
+
+insur %>% 
+  plot_ly(x = ~Claims) %>% 
+  add_markers(y = ~Payment) %>% 
+  add_lines(x = ~Claims, y = fitted(lineModel))
+
+```
+
+```{r, echo=FALSE}
+
+lineModel <- lm(Payment ~ Insured, data = insur)
+summary(lineModel) 
+
+insur %>% 
+  plot_ly(x = ~Insured) %>% 
+  add_markers(y = ~Payment) %>% 
+  add_lines(x = ~Insured, y = fitted(lineModel))
+
+```
+
+
+```{r, echo=FALSE}
+
+lineModel <- lm(Payment ~ Claims, data = insur)
+summary(lineModel) 
+
+
+
+insur %>% 
+  plot_ly(x = ~Claims) %>% 
+  add_markers(y = ~Payment) %>% 
+  add_lines(x = ~Claims, y = fitted(lineModel))
+
+```
+
+##5.-Finally the Committee wants to decide if fees should be charged
+##depending on factors such as location, amount insured,
+##miles, bonuses etc. so we need to know the cost of insure a certain risk per year.
+
+##For that they must calculate sum(payments)/sum(insured)=cost of the risk. for each of the
+##following categories:
+
+
+```{r, echo=FALSE}
+
+special_pay_zone<-insur %>% group_by(Zone) %>% 
+  summarise(special_pay=sum(Payment)/sum(Insured))
+
+plot_ly(special_pay_zone, x=~Zone, y=~special_pay, type='bar', name='special_pay_zone')%>%
+    layout(title="Special Pay Zone")
+
+```
+
+```{r, echo=FALSE}
+special_pay_kilometres<-insur %>% group_by(Kilometres) %>% 
+  summarise(special_pay=sum(Payment)/sum(Insured))
+
+plot_ly(special_pay_kilometres, x=~Kilometres, y=~special_pay, type='bar', name='special_pay_kilometres')%>%
+    layout(title="Special Pay Kilometres")
+```
+
+```{r, echo=FALSE}
+
+special_pay_bonus<-insur %>% group_by(Bonus) %>% 
+  summarise(special_pay=sum(Payment)/sum(Insured))
+
+plot_ly(special_pay_bonus, x=~Bonus, y=~special_pay, type='bar', name='special_pay_bonus')%>%
+    layout(title="Special Pay Bonus")
+    
+ 
+```
