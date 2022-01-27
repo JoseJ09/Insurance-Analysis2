@@ -278,12 +278,15 @@ insur %>%
 
 ```
 
-##5.-Finally the Committee wants to decide if fees should be charged
-##depending on factors such as location, amount insured,
-##miles, bonuses etc. so we need to know the cost of insure a certain risk per year.
+## 5.-Finally the Committee wants to decide if fees should be charged
+## depending on factors such as location, amount insured,
+## miles, bonuses etc. so we need to know the cost of insure a certain risk per year.
 
-##For that they must calculate sum(payments)/sum(insured)=cost of the risk. for each of the
-##following categories:
+## For that they must calculate sum(payments)/sum(insured)=cost of the risk. for each of the
+## following categories:
+
+
+a)Special Pay Zone
 
 
 ```{r, echo=FALSE}
@@ -296,6 +299,8 @@ plot_ly(special_pay_zone, x=~Zone, y=~special_pay, type='bar', name='special_pay
 
 ```
 
+b)Special Pay Kilometres
+
 ```{r, echo=FALSE}
 special_pay_kilometres<-insur %>% group_by(Kilometres) %>% 
   summarise(special_pay=sum(Payment)/sum(Insured))
@@ -303,6 +308,9 @@ special_pay_kilometres<-insur %>% group_by(Kilometres) %>%
 plot_ly(special_pay_kilometres, x=~Kilometres, y=~special_pay, type='bar', name='special_pay_kilometres')%>%
     layout(title="Special Pay Kilometres")
 ```
+
+c)Special Pay Bonus
+
 
 ```{r, echo=FALSE}
 

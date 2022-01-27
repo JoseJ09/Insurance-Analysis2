@@ -204,16 +204,24 @@ Kilometres
 
 ![](README_figs/README-unnamed-chunk-19-1.png)<!-- -->
 
-##5.-Finally the Committee wants to decide if fees should be charged
-##depending on factors such as location, amount insured, ##miles,
-bonuses etc. so we need to know the cost of insure a certain risk per
-year.
+## 5.-Finally the Committee wants to decide if fees should be charged
 
-##For that they must calculate sum(payments)/sum(insured)=cost of the
-risk. for each of the ##following categories:
+## depending on factors such as location, amount insured,
+
+## miles, bonuses etc. so we need to know the cost of insure a certain risk per year.
+
+## For that they must calculate sum(payments)/sum(insured)=cost of the risk. for each of the
+
+## following categories:
+
+a)Special Pay Zone
 
 ![](README_figs/README-unnamed-chunk-20-1.png)<!-- -->
 
+b)Special Pay Kilometres
+
 ![](README_figs/README-unnamed-chunk-21-1.png)<!-- -->
+
+c)Special Pay Bonus
 
 ![](README_figs/README-unnamed-chunk-22-1.png)<!-- -->
