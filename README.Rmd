@@ -1,5 +1,5 @@
 ---
-output: md_document
+output: github_document
 always_allow_html: yes
 
 ---
@@ -117,7 +117,7 @@ f)Claims
 ```{r, echo=FALSE}
 
 f<-plot_ly(x=insur$Claims, type="histogram")%>%
- layout(title="Histograma de Reclamos", xaxis=list(title="Reclamos"), yaxis=list(title="Observaciones"),bargap=0.1)
+ layout(title="Histogram of Claims", xaxis=list(title="Reclamos"), yaxis=list(title="Observaciones"),bargap=0.1)
 
 f
 ```

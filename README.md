@@ -1,3 +1,4 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # Project 1. Insurance-Analysis
@@ -42,43 +43,43 @@ claims with the variables that are known.
 
 a)Kilometres
 
-![](README_figs/README-unnamed-chunk-3-1.png)
+![](README_figs/README-unnamed-chunk-3-1.png)<!-- -->
 
 b)Zones
 
-![](README_figs/README-unnamed-chunk-4-1.png)
+![](README_figs/README-unnamed-chunk-4-1.png)<!-- -->
 
 c)Bonus
 
-![](README_figs/README-unnamed-chunk-5-1.png)
+![](README_figs/README-unnamed-chunk-5-1.png)<!-- -->
 
 d)Models
 
-![](README_figs/README-unnamed-chunk-6-1.png)
+![](README_figs/README-unnamed-chunk-6-1.png)<!-- -->
 
 e)Insured
 
-![](README_figs/README-unnamed-chunk-7-1.png)
+![](README_figs/README-unnamed-chunk-7-1.png)<!-- -->
 
 f)Claims
 
-![](README_figs/README-unnamed-chunk-8-1.png)
+![](README_figs/README-unnamed-chunk-8-1.png)<!-- -->
 
 g)Payments
 
-![](README_figs/README-unnamed-chunk-9-1.png) ## 2.-Create categories
-based on the number of claims, severity, risk etc.
+![](README_figs/README-unnamed-chunk-9-1.png)<!-- --> ## 2.-Create
+categories based on the number of claims, severity, risk etc.
 
 1.  Kilometres
 
-![](README_figs/README-unnamed-chunk-10-1.png)![](README_figs/README-unnamed-chunk-10-2.png)![](README_figs/README-unnamed-chunk-10-3.png)
+![](README_figs/README-unnamed-chunk-10-1.png)<!-- -->![](README_figs/README-unnamed-chunk-10-2.png)<!-- -->![](README_figs/README-unnamed-chunk-10-3.png)<!-- -->
 b) Zones
 
-![](README_figs/README-unnamed-chunk-11-1.png)![](README_figs/README-unnamed-chunk-11-2.png)![](README_figs/README-unnamed-chunk-11-3.png)
+![](README_figs/README-unnamed-chunk-11-1.png)<!-- -->![](README_figs/README-unnamed-chunk-11-2.png)<!-- -->![](README_figs/README-unnamed-chunk-11-3.png)<!-- -->
 
-1.  Model
+3.  Model
 
-![](README_figs/README-unnamed-chunk-12-1.png)![](README_figs/README-unnamed-chunk-12-2.png)![](README_figs/README-unnamed-chunk-12-3.png)
+![](README_figs/README-unnamed-chunk-12-1.png)<!-- -->![](README_figs/README-unnamed-chunk-12-2.png)<!-- -->![](README_figs/README-unnamed-chunk-12-3.png)<!-- -->
 
 ## 3.-The total value of payments is a fundamental variable for which the Committee is interested in knowing
 
@@ -96,15 +97,15 @@ b) Zones
     #> Insured         -0.11 -0.06  0.17  0.19    1.00   0.91    0.93
     #> Claims          -0.13 -0.11  0.11  0.25    0.91   1.00    1.00
 
-![](README_figs/README-unnamed-chunk-13-1.png)
+![](README_figs/README-unnamed-chunk-13-1.png)<!-- -->
 
-1.  Scatterplot - Claims
+2.  Scatterplot - Claims
 
-![](README_figs/README-unnamed-chunk-14-1.png)
+![](README_figs/README-unnamed-chunk-14-1.png)<!-- -->
 
-1.  Scatterplot - Insured
+3.  Scatterplot - Insured
 
-![](README_figs/README-unnamed-chunk-15-1.png)
+![](README_figs/README-unnamed-chunk-15-1.png)<!-- -->
 
 ##4.-The Committee wants to find the variables that cause the payment to
 increase or decrease. ##Therefore it is necessary to check if this is a
@@ -159,7 +160,7 @@ Kilometres
     #> Multiple R-squared:  0.9908, Adjusted R-squared:  0.9908 
     #> F-statistic: 2.353e+05 on 1 and 2180 DF,  p-value: < 2.2e-16
 
-![](README_figs/README-unnamed-chunk-17-1.png)
+![](README_figs/README-unnamed-chunk-17-1.png)<!-- -->
 
     #> 
     #> Call:
@@ -180,7 +181,7 @@ Kilometres
     #> Multiple R-squared:  0.8709, Adjusted R-squared:  0.8708 
     #> F-statistic: 1.471e+04 on 1 and 2180 DF,  p-value: < 2.2e-16
 
-![](README_figs/README-unnamed-chunk-18-1.png)
+![](README_figs/README-unnamed-chunk-18-1.png)<!-- -->
 
     #> 
     #> Call:
@@ -201,7 +202,7 @@ Kilometres
     #> Multiple R-squared:  0.9908, Adjusted R-squared:  0.9908 
     #> F-statistic: 2.353e+05 on 1 and 2180 DF,  p-value: < 2.2e-16
 
-![](README_figs/README-unnamed-chunk-19-1.png)
+![](README_figs/README-unnamed-chunk-19-1.png)<!-- -->
 
 ## 5.-Finally the Committee wants to decide if fees should be charged
 
@@ -215,12 +216,12 @@ Kilometres
 
 a)Special Pay Zone
 
-![](README_figs/README-unnamed-chunk-20-1.png)
+![](README_figs/README-unnamed-chunk-20-1.png)<!-- -->
 
 b)Special Pay Kilometres
 
-![](README_figs/README-unnamed-chunk-21-1.png)
+![](README_figs/README-unnamed-chunk-21-1.png)<!-- -->
 
 c)Special Pay Bonus
 
-![](README_figs/README-unnamed-chunk-22-1.png)
+![](README_figs/README-unnamed-chunk-22-1.png)<!-- -->
